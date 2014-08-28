@@ -1,0 +1,309 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		225BF74019AFD5D3004C712E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 225BF73F19AFD5D3004C712E /* Cocoa.framework */; };
+		225BF74A19AFD5D3004C712E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 225BF74819AFD5D3004C712E /* InfoPlist.strings */; };
+		225BF74C19AFD5D3004C712E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 225BF74B19AFD5D3004C712E /* main.m */; };
+		225BF75019AFD5D3004C712E /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 225BF74E19AFD5D3004C712E /* Credits.rtf */; };
+		225BF75319AFD5D3004C712E /* TLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 225BF75219AFD5D3004C712E /* TLAppDelegate.m */; };
+		225BF75619AFD5D3004C712E /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 225BF75419AFD5D3004C712E /* MainMenu.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		225BF73C19AFD5D3004C712E /* Rename Files.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rename Files.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		225BF73F19AFD5D3004C712E /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		225BF74219AFD5D3004C712E /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		225BF74319AFD5D3004C712E /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		225BF74419AFD5D3004C712E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		225BF74719AFD5D3004C712E /* Rename Files-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Rename Files-Info.plist"; sourceTree = "<group>"; };
+		225BF74919AFD5D3004C712E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		225BF74B19AFD5D3004C712E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		225BF74D19AFD5D3004C712E /* Rename Files-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Rename Files-Prefix.pch"; sourceTree = "<group>"; };
+		225BF74F19AFD5D3004C712E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		225BF75119AFD5D3004C712E /* TLAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TLAppDelegate.h; sourceTree = "<group>"; };
+		225BF75219AFD5D3004C712E /* TLAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TLAppDelegate.m; sourceTree = "<group>"; };
+		225BF75519AFD5D3004C712E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		225BF73919AFD5D3004C712E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				225BF74019AFD5D3004C712E /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		225BF73319AFD5D3004C712E = {
+			isa = PBXGroup;
+			children = (
+				225BF74519AFD5D3004C712E /* Rename Files */,
+				225BF73E19AFD5D3004C712E /* Frameworks */,
+				225BF73D19AFD5D3004C712E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		225BF73D19AFD5D3004C712E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				225BF73C19AFD5D3004C712E /* Rename Files.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		225BF73E19AFD5D3004C712E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				225BF73F19AFD5D3004C712E /* Cocoa.framework */,
+				225BF74119AFD5D3004C712E /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		225BF74119AFD5D3004C712E /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				225BF74219AFD5D3004C712E /* AppKit.framework */,
+				225BF74319AFD5D3004C712E /* CoreData.framework */,
+				225BF74419AFD5D3004C712E /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		225BF74519AFD5D3004C712E /* Rename Files */ = {
+			isa = PBXGroup;
+			children = (
+				225BF75119AFD5D3004C712E /* TLAppDelegate.h */,
+				225BF75219AFD5D3004C712E /* TLAppDelegate.m */,
+				225BF75419AFD5D3004C712E /* MainMenu.xib */,
+				225BF74619AFD5D3004C712E /* Supporting Files */,
+			);
+			path = "Rename Files";
+			sourceTree = "<group>";
+		};
+		225BF74619AFD5D3004C712E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				225BF74719AFD5D3004C712E /* Rename Files-Info.plist */,
+				225BF74819AFD5D3004C712E /* InfoPlist.strings */,
+				225BF74B19AFD5D3004C712E /* main.m */,
+				225BF74D19AFD5D3004C712E /* Rename Files-Prefix.pch */,
+				225BF74E19AFD5D3004C712E /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		225BF73B19AFD5D3004C712E /* Rename Files */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 225BF75919AFD5D3004C712E /* Build configuration list for PBXNativeTarget "Rename Files" */;
+			buildPhases = (
+				225BF73819AFD5D3004C712E /* Sources */,
+				225BF73919AFD5D3004C712E /* Frameworks */,
+				225BF73A19AFD5D3004C712E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Rename Files";
+			productName = "Rename Files";
+			productReference = 225BF73C19AFD5D3004C712E /* Rename Files.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		225BF73419AFD5D3004C712E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = TL;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = Tim;
+			};
+			buildConfigurationList = 225BF73719AFD5D3004C712E /* Build configuration list for PBXProject "Rename Files" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 225BF73319AFD5D3004C712E;
+			productRefGroup = 225BF73D19AFD5D3004C712E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				225BF73B19AFD5D3004C712E /* Rename Files */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		225BF73A19AFD5D3004C712E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				225BF74A19AFD5D3004C712E /* InfoPlist.strings in Resources */,
+				225BF75019AFD5D3004C712E /* Credits.rtf in Resources */,
+				225BF75619AFD5D3004C712E /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		225BF73819AFD5D3004C712E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				225BF74C19AFD5D3004C712E /* main.m in Sources */,
+				225BF75319AFD5D3004C712E /* TLAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		225BF74819AFD5D3004C712E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				225BF74919AFD5D3004C712E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		225BF74E19AFD5D3004C712E /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				225BF74F19AFD5D3004C712E /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		225BF75419AFD5D3004C712E /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				225BF75519AFD5D3004C712E /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		225BF75719AFD5D3004C712E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		225BF75819AFD5D3004C712E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		225BF75A19AFD5D3004C712E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Rename Files/Rename Files-Prefix.pch";
+				INFOPLIST_FILE = "Rename Files/Rename Files-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		225BF75B19AFD5D3004C712E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Rename Files/Rename Files-Prefix.pch";
+				INFOPLIST_FILE = "Rename Files/Rename Files-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		225BF73719AFD5D3004C712E /* Build configuration list for PBXProject "Rename Files" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				225BF75719AFD5D3004C712E /* Debug */,
+				225BF75819AFD5D3004C712E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		225BF75919AFD5D3004C712E /* Build configuration list for PBXNativeTarget "Rename Files" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				225BF75A19AFD5D3004C712E /* Debug */,
+				225BF75B19AFD5D3004C712E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 225BF73419AFD5D3004C712E /* Project object */;
+}
