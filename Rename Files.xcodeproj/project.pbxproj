@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2215745819AFD7C5000CD54B /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2215745719AFD7C5000CD54B /* README.txt */; };
 		225BF74019AFD5D3004C712E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 225BF73F19AFD5D3004C712E /* Cocoa.framework */; };
 		225BF74A19AFD5D3004C712E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 225BF74819AFD5D3004C712E /* InfoPlist.strings */; };
 		225BF74C19AFD5D3004C712E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 225BF74B19AFD5D3004C712E /* main.m */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2215745719AFD7C5000CD54B /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = SOURCE_ROOT; };
 		225BF73C19AFD5D3004C712E /* Rename Files.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rename Files.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		225BF73F19AFD5D3004C712E /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		225BF74219AFD5D3004C712E /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -82,6 +84,7 @@
 		225BF74519AFD5D3004C712E /* Rename Files */ = {
 			isa = PBXGroup;
 			children = (
+				2215745719AFD7C5000CD54B /* README.txt */,
 				225BF75119AFD5D3004C712E /* TLAppDelegate.h */,
 				225BF75219AFD5D3004C712E /* TLAppDelegate.m */,
 				225BF75419AFD5D3004C712E /* MainMenu.xib */,
@@ -157,6 +160,7 @@
 				225BF74A19AFD5D3004C712E /* InfoPlist.strings in Resources */,
 				225BF75019AFD5D3004C712E /* Credits.rtf in Resources */,
 				225BF75619AFD5D3004C712E /* MainMenu.xib in Resources */,
+				2215745819AFD7C5000CD54B /* README.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,7 +270,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Rename Files/Rename Files-Prefix.pch";
 				INFOPLIST_FILE = "Rename Files/Rename Files-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx10.7;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -278,7 +284,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Rename Files/Rename Files-Prefix.pch";
 				INFOPLIST_FILE = "Rename Files/Rename Files-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx10.7;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -302,6 +310,7 @@
 				225BF75B19AFD5D3004C712E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
