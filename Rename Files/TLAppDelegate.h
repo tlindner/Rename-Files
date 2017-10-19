@@ -30,6 +30,9 @@
 @property (assign) IBOutlet NSTextField *numberSuffix;
 @property (assign) IBOutlet NSTextField *numberStart;
 @property (assign) IBOutlet NSPopUpButton *numberFormat;
+@property (assign) IBOutlet NSTextField *moveText;
+@property (assign) IBOutlet NSTextField *moveCharacterCount;
+@property (assign) IBOutlet NSPopUpButton *moveTextWhence;
 
 @property (retain) NSMutableArray *allFiles;
 @property (retain) NSMutableArray *renamed;

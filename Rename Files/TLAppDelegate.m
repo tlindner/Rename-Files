@@ -7,6 +7,7 @@
 //
 
 NSString *InsertString( NSString *baseString, NSString *leftOrRight, NSInteger distance, NSString *insertString);
+NSString *MoveString(NSString *filename, NSString *titleOfSelectedItem, NSInteger moveCharacterCount, NSString *moveText);
 
 #import "TLAppDelegate.h"
 
@@ -29,6 +30,10 @@ NSString *InsertString( NSString *baseString, NSString *leftOrRight, NSInteger d
 @synthesize numberSuffix;
 @synthesize numberStart;
 @synthesize numberFormat;
+
+@synthesize moveText;
+@synthesize moveCharacterCount;
+@synthesize moveTextWhence;
 
 @synthesize allFiles;
 @synthesize renamed;
@@ -54,11 +59,15 @@ NSString *InsertString( NSString *baseString, NSString *leftOrRight, NSInteger d
     [insertCharacterDistance setStringValue:[ud stringForKey:@"insertCharacterDistance"]];
     [InsertLeftOrRight selectItemAtIndex:[ud integerForKey:@"InsertLeftOrRight"]];
     
-    
     [numberPrefix setStringValue:[ud stringForKey:@"numberPrefix"]];
     [numberSuffix setStringValue:[ud stringForKey:@"numberSuffix"]];
     [numberStart setStringValue:[ud stringForKey:@"numberStart"]];
     [numberFormat selectItemAtIndex:[ud integerForKey:@"numberFormat"]];
+    
+    [moveText setStringValue:[ud stringForKey:@"moveText"]];
+    [moveCharacterCount setStringValue:[ud stringForKey:@"moveCharacterCount"]];
+    [moveTextWhence selectItemAtIndex:[ud integerForKey:@"moveTextWhence"]];
+    
 //    [numberInsertDistance setStringValue:[ud stringForKey:@"numberInsertDistance"]];
 //    [numberInsertLeftOrRight selectItemAtIndex:[ud integerForKey:@"numberInsertLeftOrRight"]];
 }
@@ -80,6 +89,11 @@ NSString *InsertString( NSString *baseString, NSString *leftOrRight, NSInteger d
     [ud setValue:[numberSuffix stringValue] forKey:@"numberSuffix"];
     [ud setValue:[numberStart stringValue] forKey:@"numberStart"];
     [ud setInteger:[numberFormat indexOfSelectedItem] forKey:@"numberFormat"];
+    
+    [ud setValue:[moveText stringValue] forKey:@"moveText"];
+    [ud setValue:[moveCharacterCount stringValue] forKey:@"moveCharacterCount"];
+    [ud setInteger:[moveTextWhence indexOfSelectedItem] forKey:@"moveTextWhence"];
+
 //    [ud setValue:[numberInsertDistance stringValue] forKey:@"numberInsertDistance"];
 //    [ud setInteger:[numberInsertLeftOrRight indexOfSelectedItem] forKey:@"numberInsertLeftOrRight"];
 }
@@ -180,6 +194,12 @@ NSString *InsertString( NSString *baseString, NSString *leftOrRight, NSInteger d
             
 //            [stageOut addObject:InsertString(filename, [numberInsertLeftOrRight titleOfSelectedItem], [numberInsertDistance intValue], numberString)];
             [stageOut addObject:numberString];
+        }
+    }
+    else if ([[selectedTabViewItem identifier] isEqualToString:@"4"]) {
+        /* Move tab */
+        for (NSString *filename in stageIn) {
+            [stageOut addObject:MoveString(filename, [moveTextWhence titleOfSelectedItem], [moveCharacterCount intValue], [moveText stringValue])];
         }
     }
     else {
@@ -316,3 +336,80 @@ NSString *InsertString( NSString *baseString, NSString *leftOrRight, NSInteger d
     
     return [NSString stringWithFormat:@"%@%@%@",[baseString substringWithRange:leftRange], insertString, [baseString substringWithRange:rightRange]];
 }
+
+NSString *MoveString(NSString *filename, NSString *titleOfSelectedItem, NSInteger moveCharacterCount, NSString *moveText)
+{
+    NSRange range = [filename rangeOfString:moveText];
+    NSString *result = filename;
+    NSRange start;
+    
+    if (range.location != NSNotFound) {
+        result = [result stringByReplacingCharactersInRange:range withString:@""];
+        
+        if ([titleOfSelectedItem isEqualToString:@"To Left"]) {
+            start = NSMakeRange(range.location - moveCharacterCount, 0);
+            
+            if( start.location < 1 )
+            {
+                result = [moveText stringByAppendingString:result];
+            }
+            else
+            {
+                result = [result stringByReplacingCharactersInRange:start withString:moveText];
+            }
+        }
+        else if ([titleOfSelectedItem isEqualToString:@"To Right"]) {
+            start = NSMakeRange(range.location + moveCharacterCount, 0);
+            
+            if( start.location > ([result length]-1) )
+            {
+                result = [result stringByAppendingString:moveText];
+            }
+            else
+            {
+                result = [result stringByReplacingCharactersInRange:start withString:moveText];
+            }
+        }
+        else if ([titleOfSelectedItem isEqualToString:@"From Begining"]) {
+            start = NSMakeRange(moveCharacterCount, 0);
+            
+            if( start.location > ([result length]-1) )
+            {
+                result = [result stringByAppendingString:moveText];
+            }
+            else
+            {
+                result = [result stringByReplacingCharactersInRange:start withString:moveText];
+            }
+        }
+        else if ([titleOfSelectedItem isEqualToString:@"From End"]) {
+            start = NSMakeRange([result length] - moveCharacterCount, 0);
+            
+            if( start.location < 1 )
+            {
+                result = [moveText stringByAppendingString:result];
+            }
+            else
+            {
+                result = [result stringByReplacingCharactersInRange:start withString:moveText];
+            }
+        }
+        else
+        {
+            /* Do nothing */
+        }
+     }
+ 
+    return result;
+}
+
+
+
+
+
+
+
+
+
+
+
